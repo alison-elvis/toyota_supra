@@ -1,0 +1,87 @@
+:root {
+  --accent-color: orangered;
+  --border-color: rgb(0, 200, 15);
+}
+
+@media (min-width: 720px) {
+  .primary-header img {
+    display: block;
+    max-inline-size: 30%;
+  }
+}
+
+a {
+  color: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  font-family: Tahoma;
+  font-size: 1.125rem;
+  background-color: #f5f5f5;
+  margin: 0;
+}
+
+h1 {
+  line-height: 1.1;
+  text-align: center;
+}
+
+.wrapper {
+  max-inline-size: min(70ch, 100% - 4rem);
+  margin-inline: auto;
+}
+
+img {
+  max-inline-size: 100%;
+  display: block;
+  border: 10px solid var(--border-color);
+}
+
+section {
+  margin-block: clamp(2rem, 10vw, 6rem);
+}
+
+.columns-layout {
+  display: grid;
+  gap: 70px;
+  margin-block-end: clamp(2rem, 10vw, 6rem);
+}
+
+.columns-layout > * {
+  align-self: center;
+}
+
+@media (min-width: 720px) {
+  .columns-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.accent-bg {
+  background-color: var(--accent-color);
+  color: linen;
+  padding: 1rem;
+  border: 10px solid var(--border-color);
+}
+
+.accent-text {
+  color: var(--accent-color);
+}
+
+ul li:not(.primary-navigation ul li) {
+  margin-block: 5px;
+  list-style: square;
+}
+
+ul li:not(.primary-navigation ul li)::marker {
+  color: var(--accent-color);
+}
+
+footer {
+  text-align: center;
+}

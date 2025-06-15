@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário De Contato</title>
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+  <header class="primary-header">
+    <nav class="primary-navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#" aria-current="page">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="formulario">
+      <h1 class="formulario__titulo">Entre em Contato</h1>
+      <form class="formulario__form" id="contactForm" method="POST" action="https://formspree.io/f/xwpbbqnr">
+        <div class="formulario__grupo">
+          <label for="name" class="formulario__label">Nome:</label>
+          <input type="text" id="name" name="name" class="formulario__input" required aria-required="true" placeholder="Seu nome">
+        </div>
+        <div class="formulario__grupo">
+          <label for="email" class="formulario__label">E-mail:</label>
+          <input type="email" id="email" name="email" class="formulario__input" required aria-required="true" placeholder="seu@email.com">
+        </div>
+        <div class="formulario__grupo">
+          <label for="message" class="formulario__label">Mensagem:</label>
+          <textarea id="message" name="message" class="formulario__textarea" rows="5" required aria-required="true" placeholder="Digite sua mensagem"></textarea>
+        </div>
+        <button type="submit" class="formulario__button">Enviar</button>
+        <!-- Área para mensagens dinâmicas (sucesso ou erro) -->
+        <p id="formMessage" class="formulario__mensagem" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <script src="contact.js"></script>
+</body>
+</html>
